@@ -98,33 +98,33 @@ class Star {
     // Renders circular star shapes, changing colour as points increase
     ctx.beginPath();
     if (score <= 1000) {
-      ctx.fillStyle = "#82caff";
+      ctx.fillStyle = "violet";
     } else if (score <= 2100) {
-      ctx.fillStyle = "#00FA9A";
+      ctx.fillStyle = "indigo";
     } else if (score <= 3200) {
-      ctx.fillStyle = "#306eff";
+      ctx.fillStyle = "blue";
     } else if (score <= 4000) {
-      ctx.fillStyle = "#7609c4";
+      ctx.fillStyle = "lime";
     } else if (score <= 4300) {
-      ctx.fillStyle = "#6900b4";
+      ctx.fillStyle = "yellow";
     } else if (score <= 5400) {
-      ctx.fillStyle = "#1b1bd6";
+      ctx.fillStyle = "orange";
     } else if (score <= 5950) {
-      ctx.fillStyle = "#7f00d4";
+      ctx.fillStyle = "white";
     } else if (score <= 6500) {
-      ctx.fillStyle = "#132aff";
+      ctx.fillStyle = "gold";
     } else if (score <= 7000) {
-      ctx.fillStyle = "#00708b";
+      ctx.fillStyle = "silver";
     } else if (score <= 7500) {
-      ctx.fillStyle = "#386323";
+      ctx.fillStyle = "pink";
     } else if (score <= 8150) {
-      ctx.fillStyle = "#5d794f";
+      ctx.fillStyle = "green";
     } else if (score <= 8700) {
-      ctx.fillStyle = "#4cc437";
+      ctx.fillStyle = "navy";
     } else if (score <= 9200) {
-      ctx.fillStyle = "#838383";
+      ctx.fillStyle = "purple";
     } else if (score <= 10000) {
-      ctx.fillStyle = "#704cf0";
+      ctx.fillStyle = "aqua";
     }
     ctx.arc(xPos, yPos, s, 0, Math.PI * 2);
     ctx.fill();
@@ -138,8 +138,8 @@ class Sprite {
     this.y = y;
     this.z = z;
     // Sprites can only render in small ring around centre between -10 and -1.75, and 1.75 - 10 avoding 0 centre of screen issue
-    this.randomX = notZeroRange(-10, 10);
-    this.randomY = notZeroRange(-10, 10);
+    this.randomX = notZeroRange(-20, 20);
+    this.randomY = notZeroRange(-20, 20);
   }
 
   // Called on the Sprite object each frame to create movement
@@ -174,37 +174,37 @@ class Sprite {
       // Renders circular Sprite shapes, changing colour as points increase
       ctx.beginPath();
       if (score <= 2400) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "brown";
       } else if (score <= 2425) {
-        ctx.fillStyle = "#d1d1d1";
+        ctx.fillStyle = "maroon";
       } else if (score <= 2450) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "brown";
       } else if (score <= 2475) {
-        ctx.fillStyle = "#d1d1d1";
+        ctx.fillStyle = "maroon";
       } else if (score <= 2500) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "brown";
       } else if (score <= 2525) {
-        ctx.fillStyle = "#d1d1d1";
+        ctx.fillStyle = "maroon";
       } else if (score <= 6300) {
-        ctx.fillStyle = "#e5e4e2";
+        ctx.fillStyle = "red";
       } else if (score <= 7500) {
-        ctx.fillStyle = "#d1d1d1";
+        ctx.fillStyle = "maroon";
       } else if (score <= 7525) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "brown";
       } else if (score <= 7550) {
-        ctx.fillStyle = "#d1d1d1";
+        ctx.fillStyle = "maroon";
       } else if (score <= 7575) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "brown";
       } else if (score <= 7600) {
-        ctx.fillStyle = "#d1d1d1";
+        ctx.fillStyle = "maroon";
       } else if (score <= 7625) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "brown";
       } else if (score <= 7650) {
-        ctx.fillStyle = "#d1d1d1";
+        ctx.fillStyle = "maroon";
       } else if (score <= 10000) {
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "brown";
       }
-      ctx.arc(xPos, yPos, s, 0, Math.PI * 2);
+      ctx.arc(xPos, yPos, s, 0, Math.PI * 3);
       ctx.fill();
 
       // Passes the X and Y values into function used for collision detection
@@ -457,7 +457,7 @@ function getAllPossibleShipLocations() {
     if (actualAngle >= 0 && actualAngle <= 360) {
       return getAngleNumber(angle)[0];
     } else {
-      return -getAngleNumber(angle)[0];
+      return getAngleNumber(angle)[0];
     }
   }
   // Takes the angle and returns correct Math.sin() value for Y
@@ -466,7 +466,7 @@ function getAllPossibleShipLocations() {
     if (actualAngle >= 0 && actualAngle <= 360) {
       return getAngleNumber(angle)[1];
     } else {
-      return -getAngleNumber(angle)[1];
+      return getAngleNumber(angle)[1];
     }
   }
   // Performs operations to generate correct X position value
