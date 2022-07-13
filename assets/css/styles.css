@@ -270,7 +270,7 @@ ul.github-button {
 #start-panel,
 #crash-panel,
 #completed-panel {
-    top: 20%;
+    top: 40%;
     background-color: rgba(46, 46, 46, 0.13);
     border: 1px solid rgba(255, 255, 255, 0.212);
     border-radius: 15%;
